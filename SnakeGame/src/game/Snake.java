@@ -90,14 +90,11 @@ public class Snake {
 				}
 			}
 			if (turnPresent){ //se il blocchetto si trova in una pos di rotaz
-				//chiamo il metodo move() nella direz di rotaz
+				//move() cube in the rotation's direction
 				cub.move_cube(root, turnDirection.getDirnx(), turnDirection.getDirny());
-				//rimuovo la prima rotaz dalla lista
+				//remove first rotation from list
 				if (i == this.body_list.size() - 1) { //last cube
 					Position firstPos = this.turns.keySet().iterator().next();
-//					for(Position key : turns.keySet()){
-//						lastPos = key;
-//					  }
 					turns.remove(firstPos);
 				}
 			// scene edges
@@ -135,7 +132,7 @@ public class Snake {
 			cookie.moveCookie(this);
         }
 		if (!Utils.checkCrossing(this)){
-			System.out.println("Hai perso!");
+			System.out.println("You lost!");
 			System.exit(0);
 		}
 	}
@@ -161,7 +158,6 @@ public class Snake {
         this.body_list.add(new Cube(newPos,this.color,this.root,this.scene));
         //set the cube (new tail) to same direction of the snake's tail.
         this.getTail().setDir(dx, dy);
-//        this.getTail().drawCube(root, scene);
 	}
 
 	public void draw(Pane root, Scene scene) {
