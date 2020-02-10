@@ -34,7 +34,5 @@ public class GameScene extends Scene{
 			gc.strokeLine(0, i, Cube.W, i); //horizontal lines
 		}
 
-//		initSnake();
-//
 	}
 }
