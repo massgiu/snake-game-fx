@@ -86,10 +86,10 @@ public class Snake {
 			for (Position posKey : turns.keySet()) {
 				if (posKey.getX() == p.getX() && posKey.getY() == p.getY()) {
 					turnPresent = true;
-					turnDirection = turns.get(posKey); // estraggo la direz di rotaz dalla lista delle rotaz
+					turnDirection = turns.get(posKey); // get rotation direction from list
 				}
 			}
-			if (turnPresent) { // se il blocchetto si trova in una pos di rotaz
+			if (turnPresent) { // if a block is in a turn position
 				// move() cube in the rotation's direction
 				cub.move_cube(root, turnDirection.getDirnx(), turnDirection.getDirny());
 				// remove first rotation from list

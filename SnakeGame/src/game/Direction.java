@@ -1,15 +1,15 @@
 package game;
 
 public class Direction {
-	
+
 	private int dirnx;
 	private int dirny;
 
 	public Direction(int dirnx, int dirny) {
-		this.dirnx=dirnx;
-		this.dirny=dirny;
+		this.dirnx = dirnx;
+		this.dirny = dirny;
 	}
-	
+
 	public int getDirnx() {
 		return dirnx;
 	}
